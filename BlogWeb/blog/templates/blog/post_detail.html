@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h5>{{pt.title}}</h5>
+    <hr>
+    <p>{{pt.content}}</p>
+    <a href="{% url 'list-post' %}">Back</a>
+    <a href="{% url 'update-post' pt.pk %}">Update</a>
+    <a href="{% url 'delete_post' pt.pk %}">Delete</a>
+</body>
+</html>

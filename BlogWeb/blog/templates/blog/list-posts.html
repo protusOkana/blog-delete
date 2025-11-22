@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% for post in posts %}
+    <h4>Title:<a href="{% url 'post-detail' post.pk %}">{{post.title}}</a></h4>
+    <hr>
+    <p>{{post.content}}</p>
+    {% empty %}
+    <h5>No blogs to Desplay</h5>
+    {% endfor %}
+
+</body>
+</html>
