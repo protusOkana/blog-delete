@@ -9,6 +9,7 @@ from . views import *
 
 
 
+
 urlpatterns=[
     path('',Home,name='home'),
     path('create/',CreatePost.as_view(),name='post'),
@@ -16,4 +17,5 @@ urlpatterns=[
     path('post/<int:pk>/detail',postDetail.as_view(),name='post-detail'),
     path('post/<int:pk>/update',updatePost.as_view(),name='update-post'),
     path('post/<int:pk>/delete',deletePost.as_view(),name='delete_post'),
+
 ]
